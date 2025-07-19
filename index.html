@@ -1,124 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>MINH NGO - Neon Profile</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: radial-gradient(ellipse at top center, #222 0%, #000 100%);
-      font-family: 'Orbitron', sans-serif;
-      color: #00f7ff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      background-image: url('https://www.transparenttextures.com/patterns/black-linen.png');
-      background-repeat: repeat;
-      position: relative;
-    }
-
-    /* Avatar góc phải */
-    .avatar {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid #00f7ff;
-      box-shadow: 0 0 10px #00f7ff;
-      overflow: hidden;
-    }
-
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .profile {
-      margin-top: 80px;
-      text-align: center;
-    }
-
-    .logo {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 20px;
-      box-shadow: 0 0 30px #00f7ff;
-    }
-
-    .logo img {
-      width: 60%;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin-bottom: 30px;
-      text-shadow: 0 0 10px #00f7ff;
-    }
-
-    .btn-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .btn {
-      padding: 12px 20px;
-      background: rgba(0, 0, 0, 0.4);
-      border: 2px solid #00f7ff;
-      border-radius: 12px;
-      color: #00f7ff;
-      font-size: 16px;
-      box-shadow: 0 0 10px #00f7ff80, inset 0 0 10px #00f7ff40;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #00f7ff10;
-      box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff80;
-    }
-
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MINH NGO</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<!-- Nút phát nhạc -->
+<div class="music-toggle" onclick="toggleMusic()">
+  🎵
+</div>
 
-  <!-- Avatar góc phải -->
-  <div class="avatar">
-    <img src="3c1b7eef-db79-4d8b-a636-c7981aad7629.jpg" alt="Avatar">
-  </div>
+<!-- Audio ẩn -->
+<audio id="background-music" loop>
+  <source src="Tr Ma Remix TikTok -...mix Hot TikTok.mp3" type="audio/mpeg">
+  Trình duyệt của bạn không hỗ trợ phát nhạc.
+</audio>
 
-  <div class="profile">
-    <!-- Logo Meta ở giữa -->
-    <div class="logo">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Meta Logo">
+  <div class="container">
+    <div class="fps">FPS: 41.8</div>
+    <div class="profile">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Meta Logo" class="logo">
+      <h1>MINH NGO</h1>
+      <button class="neon-button">Dịch vụ</button>
+      <button class="neon-button wide">RBL-LQ-DV FB</button>
+
+      <div class="social-buttons">
+        <button class="neon-button">CHECKUT</button>
+        <button class="neon-button">Facebook</button>
+        <button class="neon-button">TIKTOK</button>
+        <button class="neon-button">Telegram</button>
+      </div>
+
+      <div class="messenger-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_4_Logo.svg" alt="Messenger">
+      </div>
     </div>
-
-    <h1>MINH NGO</h1>
-
-    <div class="btn-container">
-      <div class="btn">Dịch vụ</div>
-      <div class="btn">RBL-LQ-DV FB</div>
-      <div class="btn">CHECKOUT</div>
-      <div class="btn">Facebook</div>
-      <div class="btn">TIKTOK</div>
-      <div class="btn">Telegram</div>
-    </div>
   </div>
-
 </body>
 </html>
