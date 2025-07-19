@@ -5,142 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MINH NGO</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Orbitron', sans-serif;
-      color: cyan;
-      text-align: center;
-      overflow-x: hidden;
-      background: radial-gradient(circle at center, #000000, #020b19, #000000);
-      background-size: 200% 200%;
-      animation: pulseBackground 10s ease infinite;
+      box-sizing: border-box;
     }
 
-    @keyframes pulseBackground {
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: black;
+      color: cyan;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* === Animated Gradient Background === */
+    body::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(60deg, #00ffff, #000, #00ffff, #000);
+      background-size: 400% 400%;
+      animation: glowMove 20s linear infinite;
+      z-index: -2;
+      opacity: 0.1;
+      filter: blur(60px);
+    }
+
+    @keyframes glowMove {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
 
+    /* === Centered container === */
     .container {
+      position: relative;
+      z-index: 1;
       padding: 30px 20px;
       max-width: 500px;
       margin: auto;
+      text-align: center;
     }
 
     .fps {
-      position: absolute;
-      top: 10px;
-      left: 10px;
       font-size: 16px;
-      color: #ccc;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 5px 12px;
-      border-radius: 10px;
-      border: 1px solid cyan;
-      box-shadow: 0 0 8px cyan;
-    }
-
-    .avatar {
-      width: 140px;
-      height: 140px;
-      object-fit: contain;
-      border-radius: 50%;
-      margin-top: 30px;
-      box-shadow: 0 0 25px cyan;
-      animation: avatarGlow 4s infinite ease-in-out;
-    }
-
-    @keyframes avatarGlow {
-      0%, 100% { box-shadow: 0 0 20px cyan; }
-      50% { box-shadow: 0 0 40px cyan, 0 0 60px #00ffff88; }
-    }
-
-    h1 {
-      margin-top: 20px;
-      font-size: 28px;
-      color: cyan;
-      text-shadow: 0 0 10px cyan;
-    }
-
-    .neon-button {
-      display: inline-block;
-      margin: 12px 0;
-      padding: 12px 24px;
-      border-radius: 12px;
-      font-weight: bold;
-      color: cyan;
-      background-color: #111;
-      border: 2px solid cyan;
-      box-shadow: 0 0 15px cyan;
-      transition: 0.2s ease;
-      cursor: pointer;
-      animation: pulseNeon 2s infinite ease-in-out;
-    }
-
-    @keyframes pulseNeon {
-      0%, 100% { box-shadow: 0 0 15px cyan; }
-      50% { box-shadow: 0 0 25px cyan, 0 0 40px #00ffff55; }
-    }
-
-    .neon-button:hover {
-      background-color: #000;
-      box-shadow: 0 0 25px cyan;
-    }
-
-    .button-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-      margin-top: 25px;
-      padding: 0 10px;
-    }
-
-    .outline-button {
-      padding: 12px 0;
-      display: block;
-      background: transparent;
-      border: 2px solid cyan;
-      border-radius: 12px;
-      color: cyan;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 0 12px cyan;
-      transition: 0.2s ease;
-    }
-
-    .outline-button:hover {
-      background-color: rgba(0, 255, 255, 0.1);
-      box-shadow: 0 0 20px cyan;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="fps">FPS: 41.8</div>
-
-    <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Meta_Platforms_Inc._logo.svg" class="avatar" alt="Meta Logo">
-
-    <h1>MINH NGO</h1>
-
-    <div class="neon-button">Dịch vụ</div>
-    <div class="neon-button">RBL-LQ-DV FB</div>
-
-    <div class="button-grid">
-      <a class="outline-button" href="#">CHECKOUT</a>
-      <a class="outline-button" href="https://www.facebook.com/profile.php?id=61577340630604">Facebook</a>
-      <a class="outline-button" href="#">TIKTOK</a>
-      <a class="outline-button" href="#">Telegram</a>
-    </div>
-  </div>
-</body> margin: 0;
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at center, #000000 0%, #020b19 50%, #000000 100%);
-  color: #00ffff;
-  text-align: center;
-}
-
-</html>
