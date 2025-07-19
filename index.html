@@ -1,41 +1,83 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MINH NGO</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MINH NGO Profile</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: radial-gradient(circle at top center, #111, #000);
+      color: #0ff;
+      text-align: center;
+    }
+    .container {
+      padding: 30px 20px;
+    }
+    .logo {
+      width: 120px;
+      height: 120px;
+      background: white;
+      border-radius: 50%;
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo img {
+      width: 60%;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      text-shadow: 0 0 10px #0ff;
+    }
+    .button {
+      background: #000;
+      border: 2px solid #0ff;
+      color: #0ff;
+      padding: 12px 20px;
+      margin: 10px;
+      display: inline-block;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #0ff;
+      transition: all 0.3s;
+    }
+    .button:hover {
+      background: #0ff;
+      color: #000;
+      box-shadow: 0 0 20px #0ff;
+    }
+    .fps {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 14px;
+      color: #ccc;
+      opacity: 0.6;
+    }
+  </style>
 </head>
 <body>
-<!-- Nút phát nhạc -->
-<div class="music-toggle" onclick="toggleMusic()">
-  🎵
-</div>
-
-<!-- Audio ẩn -->
-<audio id="background-music" loop>
-  <source src="Tr Ma Remix TikTok -...mix Hot TikTok.mp3" type="audio/mpeg">
-  Trình duyệt của bạn không hỗ trợ phát nhạc.
-</audio>
-
+  <div class="fps">FPS: 41.8</div>
   <div class="container">
-    <div class="fps">FPS: 41.8</div>
-    <div class="profile">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Meta Logo" class="logo">
-      <h1>MINH NGO</h1>
-      <button class="neon-button">Dịch vụ</button>
-      <button class="neon-button wide">RBL-LQ-DV FB</button>
-
-      <div class="social-buttons">
-        <button class="neon-button">CHECKUT</button>
-        <button class="neon-button">Facebook</button>
-        <button class="neon-button">TIKTOK</button>
-        <button class="neon-button">Telegram</button>
-      </div>
-
-      <div class="messenger-icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Facebook_Messenger_4_Logo.svg" alt="Messenger">
-      </div>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Meta Logo">
+    </div>
+    <h1>MINH NGO</h1>
+    <a href="#" class="button">Dịch vụ</a>
+    <a href="#" class="button">RBL-LQ-DV FB</a>
+    <div>
+      <a href="#" class="button">CHECKUT</a>
+      <a href="#" class="button">Facebook</a>
+    </div>
+    <div>
+      <a href="#" class="button">TIKTOK</a>
+      <a href="#" class="button">Telegram</a>
     </div>
   </div>
 </body>
